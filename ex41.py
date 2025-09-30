@@ -4,8 +4,8 @@
 
 
 #begin_inputs
-x = int(input("digite o numero:"))
-y = int(input("digite um numero:"))
+x = int(input(" digite um numero: "))
+y = int(input(" digite um numero: "))
 #end_inputs
 if x>y:
     print(x)
