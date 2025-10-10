@@ -8,7 +8,6 @@
 
 #end_inputs
 
-	
 minutos=0
 distancia_tartaruga=500
 vel_tartaruga=1
@@ -18,5 +17,5 @@ while True:
     distancia_lebre=vel_lebre*minutos
     if distancia_lebre>=distancia_tartaruga:
         break
-    minutos += 1
+    minutos+=1
 print(minutos)
