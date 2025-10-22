@@ -12,4 +12,3 @@ if x>y:
 else:
     print(y)
 
-	

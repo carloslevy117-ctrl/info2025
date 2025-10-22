@@ -7,27 +7,16 @@
  
 
 #end_inputs
-CRESC_CEARA_MIRIM = 1.03
-
-CRESC_PARNAMIRIM=1.01
-
-CRESC_TAIPU=1.10
-
+anos = 0
+taipu = 12000
 ceara_mirim = 73000
-
 parnamirim = 250000
-
-taipu=12000
-
-ano=2018
-
-while parnamirim >= ceara_mirim or taipu:
-    ceara_mirim=round (ceara_mirim*CRESC_CEARA_MIRIM)
-    parnamirim = round(parnamirim*CRESC_PARNAMIRIM)
-    taipu=round(taipu*CRESC_TAIPU)
-ano += 1
-
-print("parnamirim sera cidade em {0}".format(ano))
-print("populacao de parnamirim: {0}".format(parnamirim))
-print("populacao de ceara-mirim: {0}".format(ceara_mirim))
-print("populacao de taipu: {0}".format(taipu))
+popu_ceara_mirim = 0.03
+popu_taipu = 0.01
+popu_parnamirim = 0.10
+while parnamirim > ceara_mirim or parnamirim > taipu:
+    ceara_mirim = ceara_mirim + (ceara_mirim + popu_ceara_mirim)
+    taipu = taipu + (taipu + popu_taipu)
+    parnamirim = (parnamirim + popu_parnamirim)
+    anos += 1
+print(anos)
