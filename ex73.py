@@ -3,12 +3,19 @@
 # @aid V7.3
 
 
-import random
+from random import randint
 
-def sorteio_loteria():
-    numeros = random.sample(range(1, 41), 25)
-    numeros.sort()
-    return numeros
-print(sorteio_loteria())
+lista = []
 
+
+for n in range(25):
+    while True:
+        num_sorteado = randint(1, 40)
+        if num_sorteado not in lista:
+            lista.append(num_sorteado)
+            break
+
+lista_ordenada = sorted(lista)
+
+print(lista_ordenada)
 
