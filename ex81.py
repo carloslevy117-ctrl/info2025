@@ -2,13 +2,41 @@
 # @sid 20251174010018
 # @aid V8.1
 
-def escrever():
-    frase = input("digite uma frase:")
+def escreverFrases(nome_arquivo):
+    #with: forma de gerenciar recursos, abre e fecha automaticamente    
+    #as: Dá nome ao recurso aberto pelo with
+    with open(nome_arquivo, "r") as f: 
+        f.write(input("Digite a frase: ") + "\n")
 
-def lerfrase(frase):
-    print("frase:", frase)
+def verFrases(nome_arquivo):
+    with open(nome_arquivo, "r") as f:
+        frases = f.readlines()
+        for frase in frases:
+            #Strip: Método de String que remove espaços em branco e quebras de linhas
+            print(frase.strip())
 
-escrever()
-lerfrase("frase")
+nome_arquivo = "frase.txt"
+
+print("_______________________")
+print("1 - Adicionar Frase")
+print("2 - Ver Frases")
+print("3 - Sair")
+pergunta = input("Vamos Brincar? ")
+
+while pergunta != "3":
+    if pergunta == "1":
+        escreverFrases(nome_arquivo)
+    elif pergunta == "2":
+        verFrases(nome_arquivo)
+    else:
+        print("Escolha inválida")
+    pergunta = input("Vamos Brincar? ")
+    
+
+
+
+
+
+    
 
 

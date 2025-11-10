@@ -30,9 +30,19 @@ if opcao == 'sim':
     novo_contato()
     print('se deseja adicionar uma novo contato digite "sim" ')
     opcao = input('digite: ')
-    adicionar_novo_contato = opcao 
+    adicionar_novo_contato = opcao
+else:
+    None
 
     nome_procurar = input('nome que deseja buscar o telefone: ')
+
+    print('deseja salvar os contatos e lê-los em um arquivo externo! em caso da resposta afirmativa de enter e precione precione a tecla "8", se não de enter e precione qualquer outra tecla')
+escolha = int(input('opção escolhida: '))
+
+if escolha == 8:
+    with open('C:\\Users\\w1mar\\OneDrive\\Documentos\\GitHub\\introd_progama-o_2semestre\\v85', mode='w') as arquivo:
+         for contato in lista_contatos:
+            arquivo.write(f"{contato['nome']};{contato['telefone']}\n")
 
 print(novo_contato())
 print(consulta_por_nome(nome_procurar))

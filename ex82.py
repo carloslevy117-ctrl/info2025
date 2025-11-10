@@ -2,9 +2,10 @@
 # @sid 20251174010018
 # @aid V8.2
 
+
 file = "frase.txt"
 
-with open(file,"r") as f:
+with open(file, "r") as f:
     linhas = f.readlines()
     numLinhas = len(linhas)
-    print(numLinhas,"linhas")
+    print(numLinhas, "linhas")
