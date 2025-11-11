@@ -5,7 +5,7 @@
 def escreverFrases(nome_arquivo):
     #with: forma de gerenciar recursos, abre e fecha automaticamente    
     #as: Dá nome ao recurso aberto pelo with
-    with open(nome_arquivo, "r") as f: 
+    with open(nome_arquivo, "a+") as f: 
         f.write(input("Digite a frase: ") + "\n")
 
 def verFrases(nome_arquivo):
